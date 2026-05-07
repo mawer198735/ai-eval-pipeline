@@ -25,12 +25,12 @@
 ## Как работает система
 
 ```mermaid
-flowchart LR
-    A[Production\nRailway] --> B[Загрузка\nновых ответов]
-    B --> C[Evaluation\nпо правилам качества]
-    C --> D{Баг\nнайден?}
+flowchart TD
+    A[Production — Railway] --> B[Загрузка новых AI-ответов]
+    B --> C[Evaluation по правилам качества]
+    C --> D{Баг найден?}
     D -- Нет --> E[✓ Quality OK]
-    D -- Да --> F[Классификация\nи Bug Tracker]
+    D -- Да --> F[Классификация и Bug Tracker]
     F --> G[Фикс промпта]
     G --> H[Regression Check]
     H -- Баг вернулся --> F
